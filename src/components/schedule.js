@@ -1,5 +1,4 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
@@ -27,7 +26,7 @@ export default function Schedule() {
               {
                 games.sort((a, b) => a.startTime - b.startTime).map(game => {
                   let home = false
-                  if (game.homeTeam == teamName) home = true
+                  if (game.homeTeam === teamName) home = true
                   return (
                     <tr key={game.id}>
                       <td>{game.id}</td>
